@@ -255,7 +255,8 @@
 									"pm.test(\"Expected booking id is in the returned array\", function () {",
 									"    pm.expect(booking_ids).to.include(pm.variables.get(\"booking_id\"));",
 									"});",
-									""
+									"",
+									"postman.setNextRequest(null);"
 								],
 								"type": "text/javascript"
 							}
@@ -351,9 +352,7 @@
 									"",
 									"pm.test(\"Response is empty\", function () {",
 									"    pm.expect(jsonData).to.have.lengthOf(0);",
-									"});",
-									"",
-									"postman.setNextRequest(null);"
+									"});"
 								],
 								"type": "text/javascript"
 							}
