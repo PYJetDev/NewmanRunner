@@ -193,8 +193,7 @@
 									"    pm.expect(booking_ids).to.include(pm.variables.get(\"booking_id\"));",
 									"});",
 									"",
-									"postman.setNextRequest(null);",
-									""
+									"postman.setNextRequest(\"Search By Checkout\");"
 								],
 								"type": "text/javascript"
 							}
@@ -586,7 +585,8 @@
 									"pm.test(\"Create fails\", function () {",
 									"    pm.response.to.not.have.success;",
 									"});",
-									""
+									"",
+									"postman.setNextRequest(null);"
 								],
 								"type": "text/javascript"
 							}
