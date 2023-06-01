@@ -584,9 +584,7 @@
 								"exec": [
 									"pm.test(\"Create fails\", function () {",
 									"    pm.response.to.not.have.success;",
-									"});",
-									"",
-									"postman.setNextRequest(null);"
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -679,7 +677,9 @@
 									"});",
 									"pm.test(\"Response additionalneeds is correct\", function () {",
 									"    pm.expect(booking.additionalneeds, \"unexpected additionalneeds\").to.eql(pm.variables.get(\"additionalneeds\"));",
-									"});"
+									"});",
+									"",
+									"postman.setNextRequest(null);"
 								],
 								"type": "text/javascript"
 							}
