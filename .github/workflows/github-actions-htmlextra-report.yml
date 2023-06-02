@@ -30,12 +30,11 @@ jobs:
    # Run the POSTMAN collection
       - name: Run API Tests
         run: newman run "Restful Booker BVT.postman_collection.json" -e Production.postman_environment.json -r cli,htmlextra --reporter-htmlextra-export testResults/htmlreport.html
-        continue-on-error: true
 
     # Upload the contents of Test Results directory to workspace
       - name: Output the run Details
         uses: actions/upload-artifact@v3
-        #if: always()
+        if: always()
         with: 
           name: RunReports
           path: testResults
