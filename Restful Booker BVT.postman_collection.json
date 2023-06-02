@@ -1127,7 +1127,7 @@
 							"    pm.response.to.be.success;",
 							"});",
 							"",
-							"postman.setNextRequest(null);"
+							"//postman.setNextRequest(null);"
 						],
 						"type": "text/javascript"
 					}
